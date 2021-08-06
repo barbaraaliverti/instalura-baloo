@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import get from 'lodash/get';
+import theme from '../../../theme';
 
 const ButtonGhost = css`
     color: ${ (props) => {
@@ -30,6 +31,8 @@ export const Button = styled.button`
         }
         return ButtonDefault;
     }}
+    transition: opacity${({ theme }) => theme.transition};
+    border-radius: ${(props) => props.theme.borderRadius};
     &:hover,
     &:focus {
         opacity: .5;
