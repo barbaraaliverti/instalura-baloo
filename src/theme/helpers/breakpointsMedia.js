@@ -1,4 +1,4 @@
-import { breakpoints } from '../theme/breakpoints';
+import { breakpoints } from '../../theme/breakpoints';
 import { css } from 'styled-components';
 
 export const breakpointsMedia = (cssByBreakpoints) => {

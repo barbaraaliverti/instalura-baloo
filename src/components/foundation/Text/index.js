@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
+import { propToStyle } from '../../../theme/helpers/propToStyle'
 
 const paragraph1 = css`
   ${({ theme }) => css`
@@ -24,14 +25,20 @@ export const TextStyleVariants = {
 };
 
 const TextBase = styled.span`
-    ${(props) => TextStyleVariants[props.variant]}
+  ${(props) => TextStyleVariants[props.variant]}
+
+  ${propToStyle('textAlign')}
+  ${propToStyle('marginBottom')}
+  ${propToStyle('margin')}
+    
 `;
 
-const Text = ({ tag, variant, children }) => {
+const Text = ({ tag, variant, children, ...props }) => {
     return (
         <TextBase
             as={tag}
             variant={variant}
+            {...props}
         >
             {children}
         </TextBase>

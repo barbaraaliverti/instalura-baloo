@@ -1,7 +1,8 @@
 import styled, { css } from 'styled-components';
 import get from 'lodash/get';
 import { TextStyleVariants } from '../../foundation/Text';
-import { breakpointsMedia } from '../../../theme/helpers';
+import { breakpointsMedia } from '../../../theme/helpers/breakpointsMedia';
+import { propToStyle } from '../../../theme/helpers/propToStyle';
 
 const ButtonGhost = css`
     color: ${ (props) => {
@@ -39,6 +40,10 @@ export const Button = styled.button`
         opacity: .5;
     }
 
+    //alignment
+    ${ propToStyle('alignText')}
+    ${ propToStyle('display')}
+    ${ propToStyle('margin')}
 
     //media query - font-size, font-weight e line-height
     ${ breakpointsMedia({
