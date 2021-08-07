@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import get from 'lodash/get';
-import theme from '../../../theme';
 import { TextStyleVariants } from '../../foundation/Text';
+import { breakpointsMedia } from '../../../theme/helpers';
 
 const ButtonGhost = css`
     color: ${ (props) => {
@@ -23,8 +23,7 @@ export const Button = styled.button`
     border: 0;
     cursor: pointer;
     padding: 12px 26px;
-    //font-size, font-weight e line-height
-    ${TextStyleVariants.smallestException}
+    
     opacity: 1;
     border-radius: 8px;
     ${(props) => {
@@ -39,5 +38,19 @@ export const Button = styled.button`
     &:focus {
         opacity: .5;
     }
+
+
+    //media query - font-size, font-weight e line-height
+    ${ breakpointsMedia({
+        xs: css`
+        /* All devices */
+            ${TextStyleVariants.smallestException}
+        `,
+        md: css`
+        /* From md breakpoint */
+            ${TextStyleVariants.paragraph1}
+        `,
+    }) }
+
 `;
 
