@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 import get from 'lodash/get';
 import theme from '../../../theme';
+import { TextStyleVariants } from '../../foundation/Text';
 
 const ButtonGhost = css`
     color: ${ (props) => {
@@ -22,7 +23,8 @@ export const Button = styled.button`
     border: 0;
     cursor: pointer;
     padding: 12px 26px;
-    font-weight: bold;
+    //font-size, font-weight e line-height
+    ${TextStyleVariants.smallestException}
     opacity: 1;
     border-radius: 8px;
     ${(props) => {
