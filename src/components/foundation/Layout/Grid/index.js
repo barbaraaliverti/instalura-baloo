@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components';
 import { breakpointsMedia } from '../../../../theme/helpers/breakpointsMedia';
 import { propToStyle } from '../../../../theme/helpers/propToStyle';
- 
 
 const Container = styled.div`
     width: 100%;
@@ -11,7 +10,7 @@ const Container = styled.div`
     margin-left: auto;
     max-width: initial;
 
-    ${breakpointsMedia({    
+    ${breakpointsMedia({
     sm: css`
       max-width: 576px; 
     `,
@@ -124,17 +123,19 @@ const Col = styled.div`
 Col.defaultProps = {
   value: {},
   offset: {},
-}; 
+};
 
 const Row = styled.div`
     display: flex;
     flex-wrap: wrap;
     margin-right: -16px;
     margin-left: -16px;
-`;  
+`;
 
-export const Grid = {
-    Container,    
-    Col,
-    Row,
+const Grid = {
+  Container,
+  Col,
+  Row,
 };
+
+export default Grid;

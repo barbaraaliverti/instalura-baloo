@@ -5,22 +5,16 @@ import { breakpointsMedia } from '../../../theme/helpers/breakpointsMedia';
 import { propToStyle } from '../../../theme/helpers/propToStyle';
 
 const ButtonGhost = css`
-    color: ${ (props) => {
-        return get(props.theme, `colors.${props.variant}.color`);        
-    }};;
+    color: ${(props) => get(props.theme, `colors.${props.variant}.color`)};;
     background: transparent;
 `;
 
 const ButtonDefault = css`    
-    color: ${ (props) => {
-        return get(props.theme, `colors.${props.variant}.contrastText`);        
-    }};;
-    background-color: ${ (props) => {
-        return get(props.theme, `colors.${props.variant}.color`);
-    }};
+    color: ${(props) => get(props.theme, `colors.${props.variant}.contrastText`)};;
+    background-color: ${(props) => get(props.theme, `colors.${props.variant}.color`)};
 `;
 
-export const Button = styled.button`
+const Button = styled.button`
     border: 0;
     cursor: pointer;
     padding: 12px 26px;
@@ -28,11 +22,11 @@ export const Button = styled.button`
     opacity: 1;
     border-radius: 8px;
     ${(props) => {
-        if(props.ghost) {
-            return ButtonGhost;
-        }
-        return ButtonDefault;
-    }}
+    if (props.ghost) {
+      return ButtonGhost;
+    }
+    return ButtonDefault;
+  }}
     transition: opacity${({ theme }) => theme.transition};
     border-radius: ${(props) => props.theme.borderRadius};
     &:hover,
@@ -41,21 +35,22 @@ export const Button = styled.button`
     }
 
     //alignment
-    ${ propToStyle('alignText')}
-    ${ propToStyle('display')}
-    ${ propToStyle('margin')}
+    ${propToStyle('alignText')}
+    ${propToStyle('display')}
+    ${propToStyle('margin')}
 
     //media query - font-size, font-weight e line-height
-    ${ breakpointsMedia({
-        xs: css`
+    ${breakpointsMedia({
+    xs: css`
         /* All devices */
             ${TextStyleVariants.smallestException}
         `,
-        md: css`
+    md: css`
         /* From md breakpoint */
             ${TextStyleVariants.paragraph1}
         `,
-    }) }
+  })}
 
 `;
 
+export default Button;
