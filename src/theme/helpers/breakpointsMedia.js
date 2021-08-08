@@ -1,5 +1,5 @@
 import { css } from 'styled-components';
-import { breakpoints } from '../breakpoints';
+import breakpoints from '../breakpoints';
 
 const breakpointsMedia = (cssByBreakpoints) => {
   const breakpointNames = Object.keys(cssByBreakpoints);

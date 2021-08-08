@@ -1,4 +1,4 @@
-import { typographyVariants } from './typographyVariants';
+import typographyVariants from './typographyVariants';
 import breakpoints from './breakpoints';
 
 const colors = {

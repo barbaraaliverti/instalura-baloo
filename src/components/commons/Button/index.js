@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components';
 import get from 'lodash/get';
 import { TextStyleVariants } from '../../foundation/Text';
-import { breakpointsMedia } from '../../../theme/helpers/breakpointsMedia';
-import { propToStyle } from '../../../theme/helpers/propToStyle';
+import breakpointsMedia from '../../../theme/helpers/breakpointsMedia';
+import propToStyle from '../../../theme/helpers/propToStyle';
 
 const ButtonGhost = css`
     color: ${(props) => get(props.theme, `colors.${props.variant}.color`)};;

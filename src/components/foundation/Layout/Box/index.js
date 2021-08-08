@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { propToStyle } from '../../../../theme/helpers/propToStyle';
+import propToStyle from '../../../../theme/helpers/propToStyle';
 
 const Box = styled.div`
     ${propToStyle('display')}

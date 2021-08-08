@@ -1,7 +1,8 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import { propToStyle } from '../../../theme/helpers/propToStyle'
+import propToStyle from '../../../theme/helpers/propToStyle';
 
 const paragraph1 = css`
   ${({ theme }) => css`
@@ -33,31 +34,26 @@ const TextBase = styled.span`
     
 `;
 
-const Text = ({ tag, variant, children, ...props }) => {
-    return (
-        <TextBase
-            as={tag}
-            variant={variant}
-            {...props}
-        >
-            {children}
-        </TextBase>
+const Text = ({
+  tag, variant, children, ...props
+}) => (
+  <TextBase
+    as={tag}
+    variant={variant}
+    {...props}
+  >
+    {children}
+  </TextBase>
 
-    );
-}
+);
 
 Text.propTypes = {
-    tag: PropTypes.string.isRequired,
-    variant: PropTypes.string.isRequired,
-    children: PropTypes.node.isRequired,
-}
-
-Text.defaultProps = {
-    tag: 'span',
-    variant: 'paragraph1',
+  tag: PropTypes.string.isRequired,
+  variant: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default Text;
 
-//p, h1-h6, span = tags
+// p, h1-h6, span = tags
 // estilos = variant

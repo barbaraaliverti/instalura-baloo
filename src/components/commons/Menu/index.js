@@ -1,42 +1,41 @@
 import React from 'react';
 import { Logo } from '../../../theme/Logo';
-import { Button } from '../Button';
+import Button from '../Button';
 import Text from '../../foundation/Text';
-import { MenuWrapper } from './styles/MenuWrapper';
+import MenuWrapper from './styles/MenuWrapper';
 
 const links = [
   {
     text: 'Home',
-    url: '/'
+    url: '/',
   },
   {
     text: 'Perguntas frequentes',
-    url: '/faq'
+    url: '/faq',
   },
   {
     text: 'Sobre',
-    url: '/sobre'
-  }
-]
-
+    url: '/sobre',
+  },
+];
 
 export default function Menu() {
-  return(
+  return (
     <MenuWrapper>
       <MenuWrapper.LeftSide><Logo /></MenuWrapper.LeftSide>
-      <MenuWrapper.CentralSide>{links.map((link)=> {
-        return(
+      <MenuWrapper.CentralSide>
+        {links.map((link) => (
           <li key={link.url}>
-            <Text tag='a' variant='smallestException' href={link.url}>
+            <Text tag="a" variant="smallestException" href={link.url}>
               {link.text}
-            </Text>          
+            </Text>
           </li>
-        )
-      })}</MenuWrapper.CentralSide>
+        ))}
+      </MenuWrapper.CentralSide>
       <MenuWrapper.RightSide>
-        <Button ghost variant='secondary.main'>Entrar</Button>
-        <Button variant='primary.main'>Cadastrar</Button>
+        <Button ghost variant="secondary.main">Entrar</Button>
+        <Button variant="primary.main">Cadastrar</Button>
       </MenuWrapper.RightSide>
     </MenuWrapper>
-  )  
-};
+  );
+}

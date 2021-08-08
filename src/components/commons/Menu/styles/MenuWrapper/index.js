@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components';
-import { breakpointsMedia } from '../../../../../theme/helpers/breakpointsMedia';
+import breakpointsMedia from '../../../../../theme/helpers/breakpointsMedia';
 import { TextStyleVariants } from '../../../../foundation/Text';
 
-export const MenuWrapper = styled.nav`
+const MenuWrapper = styled.nav`
   font-family: 'Rubik', sans-serif;
   display: flex;
   align-items: center;
@@ -11,7 +11,7 @@ export const MenuWrapper = styled.nav`
   margin-top: 18px;
   padding-left: 28px;
   padding-right: 28px;
-  ${ breakpointsMedia({
+  ${breakpointsMedia({
     md: css`
       justify-content: flex-start;
       margin-top: 32px;
@@ -110,3 +110,5 @@ MenuWrapper.RightSide = styled.div`
     `,
   })}
 `;
+
+export default MenuWrapper;

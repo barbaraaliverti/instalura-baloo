@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
-import { breakpointsMedia } from '../../../../theme/helpers/breakpointsMedia';
-import { propToStyle } from '../../../../theme/helpers/propToStyle';
+import breakpointsMedia from '../../../../theme/helpers/breakpointsMedia';
+import propToStyle from '../../../../theme/helpers/propToStyle';
 
 const Container = styled.div`
     width: 100%;
