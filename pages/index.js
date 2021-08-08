@@ -1,10 +1,10 @@
+import React from 'react';
 import Footer from '../src/components/commons/Footer';
 import Menu from '../src/components/commons/Menu';
 import Text from '../src/components/foundation/Text';
 import { Button } from '../src/components/commons/Button';
 import { Grid } from '../src/components/foundation/Layout/Grid';
 import { Box } from '../src/components/foundation/Layout/Box';
-
 
 export default function Home() {
   return (
@@ -28,20 +28,20 @@ export default function Home() {
       >
         <Grid.Row>
           <Grid.Col
-            offset={{xs: 0, md: 1}}
-            value={{ xs: 12, md: 5}}
-            display='flex'
-            alignItems='center'
-            justifyContent='center'
-            flexDirection='column'
-          >            
+            offset={{ xs: 0, md: 1 }}
+            value={{ xs: 12, md: 5 }}
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            flexDirection="column"
+          >
             <Text
               variant="title"
               tag="h1"
               color="tertiary.main"
               textAlign={{
                 xs: 'center',
-                md: 'left'
+                md: 'left',
               }}
             >
               Compartilhe momentos e conecte-se com amigos
@@ -52,11 +52,11 @@ export default function Home() {
               color="tertiary.light"
               textAlign={{
                 xs: 'center',
-                md: 'left'
-              }}              
+                md: 'left',
+              }}
             >
               Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+              Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.
             </Text>
 
             <Button
@@ -71,9 +71,10 @@ export default function Home() {
             </Button>
           </Grid.Col>
           <Grid.Col
-            value={{xs: 12, md: 6}}
+            value={{ xs: 12, md: 6 }}
           >
             <img
+              alt="A phone showing Instalura app"
               style={{ display: 'block', margin: 'auto' }}
               src="https://bootcamp-alura-01-git-modulo01.omariosouto.vercel.app/images/phones.png"
             />
@@ -82,5 +83,5 @@ export default function Home() {
       </Grid.Container>
       <Footer />
     </Box>
-  )
-};
+  );
+}
