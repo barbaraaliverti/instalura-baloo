@@ -5,6 +5,7 @@ export const propToStyle = (propName) => {
     return (
         (props) => {
             const propValue = props[propName];
+            console.log('propValue.xs', propValue)
 
             if(typeof propValue === 'object') {
                 return css`
