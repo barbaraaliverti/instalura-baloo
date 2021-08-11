@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import propToStyle from '../../../theme/helpers/propToStyle';
+import breakpointsMedia from '../../../theme/helpers/breakpointsMedia';
 
 const paragraph1 = css`
   ${({ theme }) => css`
@@ -20,9 +21,27 @@ const smallestException = css`
   `}
 `;
 
+const title = css`
+  ${({ theme }) => css`
+    font-size: ${theme.typographyVariants.titleXS.fontSize};
+    font-weight: ${theme.typographyVariants.titleXS.fontWeight};
+    line-height: ${theme.typographyVariants.titleXS.lineHeight};
+  `}
+  ${breakpointsMedia({
+    md: css`
+      ${({ theme }) => css`
+        font-size: ${theme.typographyVariants.title.fontSize};
+        font-weight: ${theme.typographyVariants.title.fontWeight};
+        line-height: ${theme.typographyVariants.title.lineHeight};
+      `}
+  `,
+  })}
+`;
+
 export const TextStyleVariants = {
   smallestException,
   paragraph1,
+  title,
 };
 
 const TextBase = styled.span`
@@ -44,13 +63,18 @@ const Text = ({
   >
     {children}
   </TextBase>
-
 );
 
 Text.propTypes = {
-  tag: PropTypes.string.isRequired,
-  variant: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
+  tag: PropTypes.string,
+  variant: PropTypes.string,
+  children: PropTypes.node,
+};
+
+Text.defaultProps = {
+  tag: 'span',
+  variant: 'paragraph1',
+  children: null,
 };
 
 export default Text;
