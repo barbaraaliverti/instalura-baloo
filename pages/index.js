@@ -7,6 +7,7 @@ import Button from '../src/components/commons/Button';
 import Grid from '../src/components/foundation/Layout/Grid';
 import Box from '../src/components/foundation/Layout/Box';
 import Modal from '../src/components/commons/Modal';
+import FormSignup from '../src/components/patterns/FormSignup';
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -26,19 +27,15 @@ export default function Home() {
       <Modal
         isOpen={isModalOpen}
         onClose={() => {
-          setIsModalOpen(false);
+          setIsModalOpen(true);
         }}
       >
 
         {(propsModal) => (
-          <Box
+          <FormSignup
             backgroundColor="white"
             {...propsModal}
-          >
-            <div>
-              Meu modal vazio
-            </div>
-          </Box>
+          />
         )}
 
       </Modal>
