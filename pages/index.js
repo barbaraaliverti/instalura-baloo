@@ -27,7 +27,7 @@ export default function Home() {
       <Modal
         isOpen={isModalOpen}
         onClose={() => {
-          setIsModalOpen(true);
+          setIsModalOpen(false);
         }}
       >
 
