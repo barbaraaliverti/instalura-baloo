@@ -41,8 +41,6 @@ const FormContent = () => {
 
         setIsFormSubmitted(true);
 
-        console.log('Formulário pronto para submit!!');
-
         const userDTO = {
           username: userInfo.username,
           name: userInfo.name,
@@ -64,11 +62,11 @@ const FormContent = () => {
           })
           .then((resConvertidaEmObj) => {
             setSubmissionStatus(formStates.DONE);
-            console.log(resConvertidaEmObj);
+            return resConvertidaEmObj;
           })
           .catch((error) => {
             setSubmissionStatus(formStates.ERROR);
-            console.error(error);
+            return error;
           }); // pega o erro de qualquer das etapas anteriores
       }}
     >
