@@ -117,41 +117,38 @@ const FormContent = () => {
         Cadastrar
       </Button>
 
-      {isFormSubmitted && submissionStatus === 'DONE' && (
-
       <Box
         display="flex"
         justifyContent="center"
         flexDirection="column"
         alignItems="center"
       >
-        <Lottie
-          width="200px"
-          height="200px"
-          className="lottie-container basic"
-          config={{ animationData: successAnimation, loop: false, autoplay: true }}
-        />
-        <p>Cadastro realizado com sucesso!</p>
-      </Box>
 
-      )}
+        {isFormSubmitted && submissionStatus === 'DONE' && (
+          <>
+            <Lottie
+              width="100px"
+              height="100px"
+              className="lottie-container basic"
+              config={{ animationData: successAnimation, loop: false, autoplay: true }}
+            />
+            <p>Cadastro realizado com sucesso!</p>
+          </>
+        )}
 
-      {isFormSubmitted && submissionStatus === 'ERROR' && (
-      <Box
-        display="flex"
-        justifyContent="center"
-        flexDirection="column"
-        alignItems="center"
-      >
-        <Lottie
-          width="200px"
-          height="200px"
-          className="lottie-container basic"
-          config={{ animationData: errorAnimation, loop: false, autoplay: true }}
-        />
-        <p>Ops! Algo deu errado!</p>
+        {isFormSubmitted && submissionStatus === 'ERROR' && (
+          <>
+            <Lottie
+              width="100px"
+              height="100px"
+              className="lottie-container basic"
+              config={{ animationData: errorAnimation, loop: false, autoplay: true }}
+            />
+            <p>Ops! Algo deu errado!</p>
+          </>
+        )}
+
       </Box>
-      )}
 
     </form>
   );

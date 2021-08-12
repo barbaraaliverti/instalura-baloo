@@ -11,7 +11,7 @@ display: flex;
 flex-direction: column;
 left: 0;
 margin: auto;
-overflow: scroll;
+overflow: hidden;
 position: fixed;
 right: 0;
 top: 0;
@@ -34,7 +34,7 @@ ${({ isOpen }) => {
 `;
 
 const LockScroll = createGlobalStyle`
-  body: {
+  body {
     overflow: hidden;
   }
 `;
