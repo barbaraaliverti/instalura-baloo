@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import propToStyle from '../../../theme/helpers/propToStyle';
 import breakpointsMedia from '../../../theme/helpers/breakpointsMedia';
+import Link from '../../Link';
+
 
 const paragraph1 = css`
   ${({ theme }) => css`

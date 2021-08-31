@@ -1,4 +1,5 @@
 import React from 'react';
+import NextLink from 'next/link';
 import Logo from '../../../theme/Logo';
 import Button from '../Button';
 import Text from '../../foundation/Text';
@@ -26,9 +27,12 @@ export default function Menu() {
       <MenuWrapper.CentralSide>
         {links.map((link) => (
           <li key={link.url}>
-            <Text tag="a" variant="smallestException" href={link.url}>
+            <NextLink href={link.url}>
+              <a>{link.text}</a>
+            </NextLink>
+            {/* <Text tag="a" variant="smallestException" href={link.url}>
               {link.text}
-            </Text>
+            </Text> */}
           </li>
         ))}
       </MenuWrapper.CentralSide>

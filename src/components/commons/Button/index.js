@@ -17,8 +17,7 @@ const ButtonDefault = css`
 const Button = styled.button`
     border: 0;
     cursor: pointer;
-    padding: 12px 26px;
-    
+    padding: 12px 26px;    
     opacity: 1;
     border-radius: 8px;
     ${(props) => {
