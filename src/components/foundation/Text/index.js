@@ -6,7 +6,6 @@ import propToStyle from '../../../theme/helpers/propToStyle';
 import breakpointsMedia from '../../../theme/helpers/breakpointsMedia';
 import Link from '../../Link';
 
-
 const paragraph1 = css`
   ${({ theme }) => css`
     font-size: ${theme.typographyVariants.paragraph1.fontSize};
@@ -56,25 +55,43 @@ const TextBase = styled.span`
 `;
 
 const Text = ({
-  tag, variant, children, ...props
-}) => (
-  <TextBase
-    as={tag}
-    variant={variant}
-    {...props}
-  >
-    {children}
-  </TextBase>
-);
+  tag, variant, children, href, ...props
+}) => {
+  if (href) {
+    return (
+      <TextBase
+        as={Link}
+        variant={variant}
+        href={href}
+      // eslint-disable-next-line react/jsx-props-no-spreading
+        {...props}
+      >
+        {children}
+      </TextBase>
+    );
+  }
+
+  return (
+    <TextBase
+      as={tag}
+      variant={variant}
+      {...props}
+    >
+      {children}
+    </TextBase>
+  );
+};
 
 Text.propTypes = {
   tag: PropTypes.string,
+  href: PropTypes.string,
   variant: PropTypes.string,
   children: PropTypes.node,
 };
 
 Text.defaultProps = {
   tag: 'span',
+  href: '',
   variant: 'paragraph1',
   children: null,
 };
