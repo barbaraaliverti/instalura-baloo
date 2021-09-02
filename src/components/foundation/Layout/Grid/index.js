@@ -27,7 +27,13 @@ const Container = styled.div`
     `,
   })}
 
-  ${propToStyle('marginTop')}
+    ${propToStyle('flex')}
+    ${propToStyle('marginTop')}
+    ${propToStyle('marginLeft')}
+    ${propToStyle('marginRight')}
+    ${propToStyle('justifyContent')}
+    ${propToStyle('marginBottom')}
+    ${propToStyle('flexDirection')}
 `;
 
 const Col = styled.div`
@@ -118,7 +124,7 @@ const Col = styled.div`
   ${propToStyle('justifyContent')}
   ${propToStyle('flexDirection')}
   ${propToStyle('paddingRight')}
-  ${propToStyle('paddingRight')}
+  ${propToStyle('order')}
 
 `;
 
