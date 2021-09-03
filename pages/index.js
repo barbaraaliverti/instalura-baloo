@@ -8,6 +8,7 @@ import Grid from '../src/components/foundation/Layout/Grid';
 import Box from '../src/components/foundation/Layout/Box';
 import Modal from '../src/components/commons/Modal';
 import FormSignup from '../src/components/patterns/FormSignup';
+import SEO from '../src/components/commons/SEO';
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -23,6 +24,7 @@ export default function Home() {
       backgroundRepeat="no-repeat"
       backgroundPosition="bottom right"
     >
+      <SEO headTitle="Home" />
 
       <Modal
         isOpen={isModalOpen}
