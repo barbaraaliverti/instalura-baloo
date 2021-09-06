@@ -2,8 +2,12 @@
 import React, { useContext } from 'react';
 import Text from '../src/components/foundation/Text';
 import Grid from '../src/components/foundation/Layout/Grid';
+
 import WebsitePageWrapper, { WebsitePageContext } from '../src/components/Wrappers/WebsitePageWrapper/WebsitePageWrapper';
 import Button from '../src/components/commons/Button';
+
+import SEO from '../src/components/commons/SEO';
+
 
 const HomeScreen = () => {
   const webpagePageContext = useContext(WebsitePageContext);
@@ -15,6 +19,7 @@ const HomeScreen = () => {
         md: '75px',
       }}
     >
+
       <Grid.Row>
         <Grid.Col
           offset={{ xs: 0, md: 1 }}
@@ -43,6 +48,24 @@ const HomeScreen = () => {
               xs: 'center',
               md: 'left',
             }}
+
+      <SEO headTitle="Home" />
+      
+      <Grid.Container
+        marginTop={{
+          xs: '32px',
+          md: '75px',
+        }}
+      >
+        <Grid.Row>
+          <Grid.Col
+            offset={{ xs: 0, md: 1 }}
+            value={{ xs: 12, md: 5 }}
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            flexDirection="column"
+
           >
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.
