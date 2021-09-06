@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import Text from '../src/components/foundation/Text';
 import Grid from '../src/components/foundation/Layout/Grid';
 import WebsitePageWrapper, { WebsitePageContext } from '../src/components/Wrappers/WebsitePageWrapper/WebsitePageWrapper';
