@@ -28,6 +28,8 @@ const Container = styled.div`
   })}
 
     ${propToStyle('flex')}
+    ${propToStyle('display')}
+    ${propToStyle('alignItems')}   
     ${propToStyle('marginTop')}
     ${propToStyle('marginLeft')}
     ${propToStyle('marginRight')}
