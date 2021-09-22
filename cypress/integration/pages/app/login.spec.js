@@ -1,5 +1,3 @@
-import { test } from 'shelljs';
-
 /// <reference types="cypress" />
 
 describe('/pages/app/login', () => {
