@@ -1,41 +1,12 @@
 import React from 'react';
-import Button from '../../src/components/commons/Button';
 import Link from '../../src/components/Link';
-import TextField from '../../src/components/patterns/TextField';
 import Box from '../../src/components/foundation/Layout/Box';
 import Grid from '../../src/components/foundation/Layout/Grid';
 import Text from '../../src/components/foundation/Text';
 import { WebsitePageContext } from '../../src/components/Wrappers/WebsitePageWrapper/WebsitePageWrapper';
 import websitePageHOC from '../../src/components/Wrappers/WebsitePageWrapper/hoc';
 import Logo from '../../src/theme/Logo';
-
-function LoginForm() {
-  return (
-    <form id="formCadastro" action="/app/profile">
-      <TextField
-        placeholder="Usuário"
-        name="usuario"
-      />
-      <TextField
-        placeholder="Senha"
-        name="senha"
-        type="password"
-      />
-
-      <Button
-        type="submit"
-        variant="primary.main"
-        margin={{
-          xs: '0 auto',
-          md: 'initial',
-        }}
-        fullWidth
-      >
-        Entrar
-      </Button>
-    </form>
-  );
-}
+import LoginForm from '../../src/components/patterns/FormLogin';
 
 // Essa página e desafio, e vamos dar pronto no próximo módulo o 04
 function LoginScreen() {
