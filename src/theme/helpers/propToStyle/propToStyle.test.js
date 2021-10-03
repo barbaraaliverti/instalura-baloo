@@ -20,16 +20,16 @@ describe('propToStyle()', () => {
   describe('when an argument with breakpoints is received', () => {
     test('renders only one breakpoint resolution', () => {
       const propToStyleResult = propToStyle('textAlign');
-      const componentProps = { textAlign: { xs: 'center'} };
+      const componentProps = { textAlign: { xs: 'center' } };
       const styleResult = propToStyleResult(componentProps);
       expect(styleResult).toMatchSnapshot();
     });
 
     test('renders two or more breakpoint resolutions', () => {
-        const propToStyleResult = propToStyle('textAlign');
-        const componentProps = { textAlign: { xs: 'center', md: 'right' } };
-        const styleResult = propToStyleResult(componentProps);
-        expect(styleResult).toMatchSnapshot();
-      });
+      const propToStyleResult = propToStyle('textAlign');
+      const componentProps = { textAlign: { xs: 'center', md: 'right' } };
+      const styleResult = propToStyleResult(componentProps);
+      expect(styleResult).toMatchSnapshot();
+    });
   });
 });
